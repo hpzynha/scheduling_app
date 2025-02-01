@@ -12,4 +12,6 @@ class Scheduling {
     required this.date,
     required this.contact,
   });
+
+  static fromJson(item) {}
 }

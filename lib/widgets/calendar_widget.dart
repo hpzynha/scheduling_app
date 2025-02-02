@@ -17,15 +17,22 @@ class CalendarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TableCalendar(
-      firstDay: DateTime(2025, 1, 1),
-      lastDay: DateTime.utc(2140, 1, 1),
-      focusedDay: focusedDay,
-      calendarFormat: calendarFormat,
-      selectedDayPredicate: (day) {
-        return isSameDay(selectedDay, day);
-      },
-      onDaySelected: onDaySelected,
+    return Card(
+      elevation: 10,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
+      color: Theme.of(context).primaryColor,
+      child: TableCalendar(
+        firstDay: DateTime(2025, 1, 1),
+        lastDay: DateTime.utc(2140, 1, 1),
+        focusedDay: focusedDay,
+        calendarFormat: calendarFormat,
+        selectedDayPredicate: (day) {
+          return isSameDay(selectedDay, day);
+        },
+        onDaySelected: onDaySelected,
+      ),
     );
   }
 }

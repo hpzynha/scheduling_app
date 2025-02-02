@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+
 import 'package:provider/provider.dart';
 import 'package:scheduling_app/pages/home_page.dart';
 import 'package:scheduling_app/theme/theme.dart';
 import 'package:scheduling_app/theme/theme_provider.dart';
 
-void main() {
+Future<void> main() async {
   runApp(
     ChangeNotifierProvider(
       create: (context) => ThemeProvider(),

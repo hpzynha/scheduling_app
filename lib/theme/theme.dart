@@ -2,19 +2,23 @@ import 'package:flutter/material.dart';
 
 ThemeData lightMode = ThemeData(
   brightness: Brightness.light,
-  colorScheme: ColorScheme.light(
-    surface: Colors.grey.shade400,
+  colorScheme: const ColorScheme.light(
+    surface: Color(0xFFF7F7F7),
   ),
   primaryColor: Colors.grey.shade300,
   secondaryHeaderColor: Colors.grey.shade200,
+  indicatorColor: const Color(0xFFFFF9E0),
+  focusColor: const Color(0XFFFFCC00),
 );
 
 ThemeData darkMode = ThemeData(
   brightness: Brightness.dark,
-  colorScheme: ColorScheme.dark(
-    surface: Colors.grey.shade800,
+  colorScheme: const ColorScheme.dark(
+    surface: Color(0XFF050505),
   ),
-  primaryColor: Colors.grey.shade900,
-  secondaryHeaderColor: Colors.grey.shade800,
+  primaryColor: const Color(0XFF666666),
+  secondaryHeaderColor: const Color(0XFFD1D1D1),
   cardColor: const Color(0XFF121212),
+  indicatorColor: const Color(0xFFFFF9E0),
+  focusColor: const Color(0XFFFFCC00),
 );

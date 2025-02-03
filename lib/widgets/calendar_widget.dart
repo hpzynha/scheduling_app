@@ -26,7 +26,7 @@ class CalendarWidget extends StatelessWidget {
       ),
       color: theme.primaryColor,
       child: TableCalendar(
-        // locale: 'pt_BR',
+        locale: 'pt_BR',
         firstDay: DateTime(2025, 1, 1),
         lastDay: DateTime.utc(2140, 1, 1),
         focusedDay: focusedDay,

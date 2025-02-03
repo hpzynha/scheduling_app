@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:scheduling_app/widgets/calendar_widget.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -13,6 +14,12 @@ class _HomePageState extends State<HomePage> {
   final CalendarFormat _calendarFormat = CalendarFormat.month;
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
+
+  @override
+  void initState() {
+    super.initState();
+    initializeDateFormatting('pt_BR', null); // Inicializa o locale
+  }
 
   @override
   Widget build(BuildContext context) {

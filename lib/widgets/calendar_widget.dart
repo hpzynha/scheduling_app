@@ -34,6 +34,19 @@ class CalendarWidget extends StatelessWidget {
         selectedDayPredicate: (day) {
           return isSameDay(selectedDay, day);
         },
+        daysOfWeekStyle: DaysOfWeekStyle(
+          weekdayStyle: TextStyle(
+            color:
+                isDarkMode ? const Color(0xFFF7F7F7) : const Color(0XFF050505),
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+          ),
+          weekendStyle: const TextStyle(
+            color: Colors.red,
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         calendarStyle: CalendarStyle(
           todayDecoration: BoxDecoration(
             color: theme.focusColor,
@@ -61,6 +74,8 @@ class CalendarWidget extends StatelessWidget {
           ),
         ),
         headerStyle: HeaderStyle(
+          titleCentered: true,
+          formatButtonVisible: false,
           titleTextStyle: TextStyle(
             color: isDarkMode
                 ? const Color(0xFFF7F7F7)
